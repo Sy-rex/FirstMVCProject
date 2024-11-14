@@ -5,3 +5,5 @@ Commit №1 Creating project with thymeleafe and add DispatcherServlet for url /
 Commit №2 Delete xml configuration and add full Java-based configuration
 
 Commit №3 Training to use Annotation @RequestMapping and multiple Controller
+
+Commit #4 Training to use Annotation @RequestParam in controller and view
