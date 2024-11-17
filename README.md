@@ -9,3 +9,5 @@ Commit №3 Training to use Annotation @RequestMapping and multiple Controller
 Commit №4 Training to use Annotation @RequestParam in controller and view
 
 Commit №5 Training to use data transfer from the controller to the view with use Model and Thymeleaf
+
+Commit №6 Training to use DAO, implemented R From CRUD while without real DB
