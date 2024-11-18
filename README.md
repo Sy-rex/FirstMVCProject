@@ -15,3 +15,5 @@ Commit №6 Training to use DAO, implemented R from CRUD while without real DB
 Commit №7 Training to use Annotation @ModelAttribute and implemented C from CRUD while without real DB
 
 Commit №8 Implemented a CRUD application with processing GET,POST,PATCH, DELETE requests
+
+Commit №9 Training to use Annotation @Valid for data like email, age, name
