@@ -17,3 +17,5 @@ Commit №7 Training to use Annotation @ModelAttribute and implemented C from CR
 Commit №8 Implemented a CRUD application with processing GET,POST,PATCH, DELETE requests
 
 Commit №9 Training to use Annotation @Valid for data like email, age, name
+
+Commit №10 Create a JDBC connection with PostgreSQL and implement some of the methods from the DAO so far without protection from SQL injections 
