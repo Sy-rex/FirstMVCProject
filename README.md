@@ -19,3 +19,5 @@ Commit №8 Implemented a CRUD application with processing GET,POST,PATCH, DELET
 Commit №9 Training to use Annotation @Valid for data like email, age, name
 
 Commit №10 Create a JDBC connection with PostgreSQL and implement some of the methods from the DAO so far without protection from SQL injections 
+
+Commit №11 Training to use PreparedStatement to protect from SQL injections and implement all methods from the DAO
