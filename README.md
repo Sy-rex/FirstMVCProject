@@ -25,3 +25,5 @@ Commit №11 Training to use PreparedStatement to protect from SQL injections an
 Commit №12 Training to use JdbcTemplate by replacing JDBC API
 
 Commit №13 Training to use database.properties files to securely store information needed to work with the database
+
+Commit №14 Training to use Batch update and measuring the difference with a regular SQL opertions
