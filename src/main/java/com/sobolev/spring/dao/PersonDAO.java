@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class PersonDAO {
@@ -30,6 +31,11 @@ public class PersonDAO {
     public Person show(int id) {
         return jdbcTemplate.query("SELECT * FROM person WHERE id=?", new BeanPropertyRowMapper<>(Person.class), id)
                 .stream().findFirst().orElse(null);
+    }
+
+    public Optional<Person> show(String email) {
+        return jdbcTemplate.query("SELECT * FROM person WHERE email=?", new BeanPropertyRowMapper<>(Person.class), email)
+                .stream().findAny();
     }
 
     public void save(Person person) {
