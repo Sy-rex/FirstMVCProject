@@ -29,3 +29,5 @@ Commit №13 Training to use database.properties files to securely store informa
 Commit №14 Training to use Batch update and measuring the difference with a regular SQL opertions
 
 Commit №15 Training to create PersonValidator implements Validator
+
+Commit №16 Training to use Annotation @Pattern with regex
