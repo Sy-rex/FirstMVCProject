@@ -31,3 +31,5 @@ Commit №14 Training to use Batch update and measuring the difference with a re
 Commit №15 Training to create PersonValidator implements Validator
 
 Commit №16 Training to use Annotation @Pattern with regex
+
+Commit №17 Training to use <select> and <option> with Thymeleaf and add new controller
