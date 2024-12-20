@@ -1,51 +1,39 @@
 package com.sobolev.spring.models;
 
-import jakarta.validation.constraints.Email;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 
+@Entity
+@Table(name = "Person")
 public class Person {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
 
-    @NotEmpty(message = "Name shouldn`t be empty")
-    @Size(min = 2,max = 30,message = "Name should be between 2 nd 30 characters")
+    @NotEmpty(message = "Name shouldn't be empty")
+    @Size(min = 2, max = 30, message = "Name should be between 2 and 30 characters")
+    @Column(name = "name")
     private String name;
 
     @Min(value = 1, message = "Age should be greater than 0")
+    @Column(name = "age")
     private int age;
 
-    @NotEmpty(message = "Name shouldn`t be empty")
-    @Email(message = "Email should be valid")
-    private String email;
-
-    public int getAge() {
-        return age;
+    // Конструктор по умолчанию
+    public Person() {
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Person(int id, String name, int age, String email) {
-        this.id = id;
+    // Конструктор с параметрами
+    public Person(String name, int age) {
         this.name = name;
         this.age = age;
-        this.email = email;
     }
 
-    public Person() {
-
-    }
-
+    // Геттеры и сеттеры
     public int getId() {
         return id;
     }
@@ -60,5 +48,13 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
