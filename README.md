@@ -23,3 +23,5 @@ Commit №10 Create a JDBC connection with PostgreSQL and implement some of the 
 Commit №11 Training to use PreparedStatement to protect from SQL injections and implement all methods from the DAO
 
 Commit №12 Training to use JdbcTemplate by replacing JDBC API
+
+Commit №13 Training to use Hibernate in Spring
