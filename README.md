@@ -37,3 +37,5 @@ Commit №17 Training to use <select> and <option> with Thymeleaf and add new co
 Commit №18 Training to start use Hibernate with Spring
 
 Commit №19 Release all CRUD operations with Hibernate in Spring 
+
+Commit №20 Training to use Spring Data JPA and testing Annotations @Repository and @Service

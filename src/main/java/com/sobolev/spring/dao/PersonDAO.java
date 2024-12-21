@@ -56,7 +56,9 @@ public class PersonDAO {
     @Transactional
     public void update(int id, Person person) {
         Session session = sessionFactory.getCurrentSession();
-        session.update(person);
+        Person p = session.get(Person.class, id);
+        p.setName(person.getName());
+        p.setAge(person.getAge());
     }
 
     @Transactional
