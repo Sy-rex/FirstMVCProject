@@ -33,30 +33,39 @@ public class PersonDAO {
         List<Person> persons = session.createQuery("SELECT p FROM Person p", Person.class).getResultList();
         return persons;
     }
-}
 
-//    public Person show(int id) {
-//        return jdbcTemplate.query("SELECT * FROM person WHERE id=?", new BeanPropertyRowMapper<>(Person.class), id)
-//                .stream().findFirst().orElse(null);
-//    }
-//
-//    public Optional<Person> show(String email) {
+    @Transactional
+    public Person show(int id) {
+        Session session = sessionFactory.getCurrentSession();
+        Person person = session.get(Person.class, id);
+        return person;
+    }
+
+
+    //    public Optional<Person> show(String email) {
 //        return jdbcTemplate.query("SELECT * FROM person WHERE email=?", new BeanPropertyRowMapper<>(Person.class), email)
 //                .stream().findAny();
 //    }
 //
-//    public void save(Person person) {
-//        ++PEOPLE_COUNT;
-//        jdbcTemplate.update("INSERT INTO person VALUES (?,?,?,?,?)",PEOPLE_COUNT, person.getName(), person.getAge(), person.getEmail(), person.getAddress());
-//    }
-//
-//    public void update(int id, Person person) {
-//        jdbcTemplate.update("UPDATE person SET name=?, age=?, email=?, address=? WHERE id=?", person.getName(), person.getAge(), person.getEmail(), person.getAddress(), id);
-//    }
-//
-//    public void delete(int id) {
-//        jdbcTemplate.update("DELETE FROM person WHERE id=?", id);
-//    }
+    @Transactional
+    public void save(Person person) {
+        Session session = sessionFactory.getCurrentSession();
+        session.save(person);
+    }
+
+    @Transactional
+    public void update(int id, Person person) {
+        Session session = sessionFactory.getCurrentSession();
+        session.update(person);
+    }
+
+    @Transactional
+    public void delete(int id) {
+        Session session = sessionFactory.getCurrentSession();
+        Person person = session.get(Person.class, id);
+        session.delete(person);
+    }
+}
 //
 //    /*Тестирую производительность пакетной вставки*/
 //

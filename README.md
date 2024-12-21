@@ -35,3 +35,5 @@ Commit №16 Training to use Annotation @Pattern with regex
 Commit №17 Training to use <select> and <option> with Thymeleaf and add new controller
 
 Commit №18 Training to start use Hibernate with Spring
+
+Commit №19 Release all CRUD operations with Hibernate in Spring 
