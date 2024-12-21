@@ -3,6 +3,8 @@ package com.sobolev.spring.models;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "Person")
 public class Person {
@@ -19,6 +21,9 @@ public class Person {
     @Min(value = 1, message = "Age should be greater than 0")
     @Column(name = "age")
     private int age;
+
+    @OneToMany(mappedBy = "owner")
+    private List<Item> items;
 
     public Person(String name, int age) {
 //        this.id = id;
@@ -79,5 +84,13 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Item> items) {
+        this.items = items;
     }
 }

@@ -2,6 +2,7 @@ package com.sobolev.spring.controllers;
 
 
 import com.sobolev.spring.models.Person;
+import com.sobolev.spring.services.ItemService;
 import com.sobolev.spring.services.PeopleService;
 import com.sobolev.spring.util.PersonValidator;
 import jakarta.validation.Valid;
@@ -17,10 +18,12 @@ public class PeopleController {
 
 //    private final peopleService peopleService;
     private final PeopleService peopleService;
+    private final ItemService itemService;
 
     @Autowired
-    public PeopleController(PeopleService peopleService) {
+    public PeopleController(PeopleService peopleService, ItemService itemService) {
         this.peopleService = peopleService;
+        this.itemService = itemService;
     }
 //    private final PersonValidator personValidator;
 
@@ -33,6 +36,12 @@ public class PeopleController {
     @GetMapping()
     public String index(Model model) {
         model.addAttribute("people", peopleService.findAll());
+
+        itemService.findByItemName("TV");
+        itemService.findByOwner(peopleService.findAll().get(0));
+
+        peopleService.test();
+
         return "people/index";
     }
 
