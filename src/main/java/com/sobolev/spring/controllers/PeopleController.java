@@ -1,6 +1,7 @@
 package com.sobolev.spring.controllers;
 
 
+import com.sobolev.spring.dao.PersonDAO;
 import com.sobolev.spring.models.Person;
 import com.sobolev.spring.services.ItemService;
 import com.sobolev.spring.services.PeopleService;
@@ -19,11 +20,13 @@ public class PeopleController {
 //    private final peopleService peopleService;
     private final PeopleService peopleService;
     private final ItemService itemService;
+    private final PersonDAO personDAO;
 
     @Autowired
-    public PeopleController(PeopleService peopleService, ItemService itemService) {
+    public PeopleController(PeopleService peopleService, ItemService itemService, PersonDAO personDAO) {
         this.peopleService = peopleService;
         this.itemService = itemService;
+        this.personDAO = personDAO;
     }
 //    private final PersonValidator personValidator;
 
@@ -36,6 +39,8 @@ public class PeopleController {
     @GetMapping()
     public String index(Model model) {
         model.addAttribute("people", peopleService.findAll());
+
+        personDAO.testNPlus1();
 
         itemService.findByItemName("TV");
         itemService.findByOwner(peopleService.findAll().get(0));

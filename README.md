@@ -45,3 +45,5 @@ Commit №21 Training to write custom methods in Spring Data JPA and testing thi
 Commit №22 Training to use type Date in Hibernate
 
 Commit №23 Training to use Enum in Hibernate with Annotations @Enumerated
+
+Commit №24 Training to solve problem of N+1
