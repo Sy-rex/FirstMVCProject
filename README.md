@@ -41,3 +41,5 @@ Commit №19 Release all CRUD operations with Hibernate in Spring
 Commit №20 Training to use Spring Data JPA and testing Annotations @Repository and @Service
 
 Commit №21 Training to write custom methods in Spring Data JPA and testing this methods in debug
+
+Commit №22 Training to use type Date in Hibernate
