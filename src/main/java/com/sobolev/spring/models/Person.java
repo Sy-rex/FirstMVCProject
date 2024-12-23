@@ -36,6 +36,10 @@ public class Person {
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;
 
+//    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
+    private Mood mood;
+
     public Person(String name, int age) {
 //        this.id = id;
         this.name = name;
@@ -87,6 +91,14 @@ public class Person {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public Mood getMood() {
+        return mood;
+    }
+
+    public void setMood(Mood mood) {
+        this.mood = mood;
     }
 
     public String getName() {

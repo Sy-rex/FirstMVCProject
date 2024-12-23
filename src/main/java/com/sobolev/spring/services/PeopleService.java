@@ -1,5 +1,6 @@
 package com.sobolev.spring.services;
 
+import com.sobolev.spring.models.Mood;
 import com.sobolev.spring.models.Person;
 import com.sobolev.spring.repositories.PeopleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,7 @@ public class PeopleService {
     @Transactional
     public void save(Person person) {
         person.setCreatedAt(new Date());
+        person.setMood(Mood.CALM);
         peopleRepository.save(person);
     }
 
